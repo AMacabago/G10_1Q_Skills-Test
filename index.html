@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rice & Roll</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css"/>
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  </head>
+
+  <body class="bg-light container rounded shadow my-3 ms-5">
+    <div>
+      <div id="title" class="text-center p-3">
+          <h1>Food Ordering System</h1>
+      </div>
+
+      <div id="menu">
+          <h3>Menu:</h3>
+
+          <input type="checkbox" id="salmonCheese" value="salmonCheese">
+          <label for="salmonCheese">Salmon Cheese</label> <br>
+          <input type="checkbox" id="spicyTuna" value="spicyTuna">
+          <label for="spicyTuna">Spicy Tuna</label> <br>
+          <input type="checkbox" id="californiaMaki" value="californiaMaki">
+          <label for="californiaMaki">California Maki</label> <br>
+          <input type="checkbox" id="eggNigiri" value="eggNigiri">
+          <label for="eggNigiri">Egg Nigiri</label> <br>
+          <input type="checkbox" id="tunaSaladRoll" value="tunaSaladRoll">
+          <label for="tunaSaladRoll">Tuna Salad Roll</label>
+      </div>
+
+      <div id="customerDetails">
+        <h3>Customer Details:</h3>
+
+        <input type="text" placeholder="Enter Name" id="name" class="mb-2"><br>
+        <input type="text" placeholder="Enter Address" id="address" class="mb-2"><br>
+        <input type="text" placeholder="Enter Phone Number" id="number" class="mb-2"><br>
+
+        <button class="btn btn-outline-primary mb-2" py-click="createOrder">Create Order</button>
+      </div>
+
+      <div id="output" class="pb-2"></div>
+
+      <py-script src="main.py"></py-script>
+    </div>
+  </body>
+</html>
